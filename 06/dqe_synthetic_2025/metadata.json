@@ -1,0 +1,84 @@
+{
+  "id": "003ae87d-0b78-4705-86c1-6a847484d9f9",
+  "created_at": "2025",
+  "pixel_pitch_mm": 0.2,
+  "nyquist_cyc_per_mm": 2.5,
+  "params": {
+    "image_size_px": [
+      1024,
+      1024
+    ],
+    "pixel_pitch_mm": 0.2,
+    "doses": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "frames_per_dose": 2,
+    "dark_frames": 2,
+    "edge_frames": 2,
+    "edge_angle_deg": 2.0,
+    "psf_sigma_pixels": 3.0,
+    "q_mean_at_dose1": 6000.0,
+    "gain_per_quantum": 1.0,
+    "edge_signal_level": 6000.0,
+    "edge_add_quantum_noise": false,
+    "seed": 42,
+    "save_png": true,
+    "bit_depth": 16
+  },
+  "files": [
+    {
+      "type": "dark",
+      "path": "dark/dark_00"
+    },
+    {
+      "type": "dark",
+      "path": "dark/dark_01"
+    },
+    {
+      "type": "flat",
+      "path": "flat/flat_D0.5_00",
+      "dose": 0.5
+    },
+    {
+      "type": "flat",
+      "path": "flat/flat_D0.5_01",
+      "dose": 0.5
+    },
+    {
+      "type": "flat",
+      "path": "flat/flat_D1_00",
+      "dose": 1.0
+    },
+    {
+      "type": "flat",
+      "path": "flat/flat_D1_01",
+      "dose": 1.0
+    },
+    {
+      "type": "flat",
+      "path": "flat/flat_D2_00",
+      "dose": 2.0
+    },
+    {
+      "type": "flat",
+      "path": "flat/flat_D2_01",
+      "dose": 2.0
+    },
+    {
+      "type": "edge",
+      "path": "edge/edge_00",
+      "angle_deg": 2.0,
+      "blur_sigma_px": 3.0,
+      "edge_level": 6000.0
+    },
+    {
+      "type": "edge",
+      "path": "edge/edge_01",
+      "angle_deg": 2.0,
+      "blur_sigma_px": 3.0,
+      "edge_level": 6000.0
+    }
+  ]
+}
