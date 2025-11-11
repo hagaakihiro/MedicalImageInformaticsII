@@ -29,9 +29,9 @@ xmax = 10
 
 x = np.linspace(xmin, xmax, 1000)
 
-#y = rect(x)
+y = rect(x, 1.0)
 #y = triangular_pulse(x, 1.0)
-y = gaussian_wavepacket(x, x0=0, sigma=1.0)
+#y = gaussian_wavepacket(x, x0=0, sigma=1.0)
 
 nn = len(x)
 plt.plot(x,y)
@@ -66,9 +66,10 @@ ifreq = np.fft.fftfreq(len(ix), d=(ix[1] - ix[0]))
 ifft_result = np.fft.ifft(iy)
 ifft_result_shifted = np.fft.ifftshift(ifft_result)
 ifreq_shifted = np.fft.ifftshift(freq)
-
+mtf = np.abs(ifft_result)
+mtf = mtf / np.max(mtf)
 plt.plot(x,y)
-plt.plot(x,np.abs(ifft_result))
+plt.plot(x,mtf)
 plt.show()
 
 
